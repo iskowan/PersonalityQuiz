@@ -35,6 +35,9 @@
                                         <rect key="frame" x="91.333333333333329" y="44" width="194.66666666666669" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Begin Personality Quiz"/>
+                                        <connections>
+                                            <action selector="startQuizPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DtY-Zz-DRj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -75,7 +78,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="foI-KX-BdN" kind="show" id="HU0-ok-vRw"/>
+                        <segue destination="foI-KX-BdN" kind="show" identifier="startQuiz" id="HU0-ok-vRw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -212,7 +215,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbi-Yr-I6n">
-                                <rect key="frame" x="0.0" y="76" width="393" height="38.333333333333343"/>
+                                <rect key="frame" x="158.66666666666666" y="76" width="75.666666666666657" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -228,12 +231,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Zqc-Fh-Cdm" firstAttribute="leading" secondItem="1Wj-uV-cFw" secondAttribute="leadingMargin" id="1VZ-3u-rUt"/>
-                            <constraint firstItem="fbi-Yr-I6n" firstAttribute="leading" secondItem="YPT-ZN-8yg" secondAttribute="leading" id="1ha-aI-osl"/>
+                            <constraint firstItem="KCT-4G-UoZ" firstAttribute="centerX" secondItem="fbi-Yr-I6n" secondAttribute="centerX" id="1fc-fu-oyw"/>
+                            <constraint firstItem="fbi-Yr-I6n" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YPT-ZN-8yg" secondAttribute="leading" id="1ha-aI-osl"/>
+                            <constraint firstItem="Gg7-vB-l7C" firstAttribute="leading" secondItem="YPT-ZN-8yg" secondAttribute="leading" constant="20" id="A9O-Hh-fVG"/>
                             <constraint firstItem="3Kn-zi-Dt2" firstAttribute="centerY" secondItem="1Wj-uV-cFw" secondAttribute="centerY" id="Hu2-Mi-EkF"/>
                             <constraint firstItem="Gg7-vB-l7C" firstAttribute="leading" secondItem="YPT-ZN-8yg" secondAttribute="leading" id="Tqe-No-OZB"/>
                             <constraint firstItem="YPT-ZN-8yg" firstAttribute="trailing" secondItem="Gg7-vB-l7C" secondAttribute="trailing" id="VFO-dO-9Vk"/>
+                            <constraint firstItem="Gg7-vB-l7C" firstAttribute="trailing" secondItem="YPT-ZN-8yg" secondAttribute="trailing" constant="20" id="Wan-8n-EL3"/>
                             <constraint firstItem="fbi-Yr-I6n" firstAttribute="top" secondItem="YPT-ZN-8yg" secondAttribute="top" constant="20" id="Xr0-Fi-2Hf"/>
-                            <constraint firstItem="YPT-ZN-8yg" firstAttribute="trailing" secondItem="fbi-Yr-I6n" secondAttribute="trailing" id="YAB-9D-TUI"/>
+                            <constraint firstItem="YPT-ZN-8yg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fbi-Yr-I6n" secondAttribute="trailing" id="YAB-9D-TUI"/>
                             <constraint firstItem="3Kn-zi-Dt2" firstAttribute="leading" secondItem="1Wj-uV-cFw" secondAttribute="leadingMargin" id="YOU-nE-EfN"/>
                             <constraint firstItem="YPT-ZN-8yg" firstAttribute="bottom" secondItem="KCT-4G-UoZ" secondAttribute="bottom" constant="20" id="a03-na-pab"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zqc-Fh-Cdm" secondAttribute="trailing" id="l80-1o-fhL"/>
@@ -241,15 +247,12 @@
                             <constraint firstItem="KCT-4G-UoZ" firstAttribute="centerX" secondItem="Gg7-vB-l7C" secondAttribute="centerX" id="sxx-CK-ob4"/>
                             <constraint firstItem="Gg7-vB-l7C" firstAttribute="centerY" secondItem="1Wj-uV-cFw" secondAttribute="centerY" id="t4E-zD-2Xu"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="3Kn-zi-Dt2"/>
-                                <exclude reference="Zqc-Fh-Cdm"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="jvw-RG-e7f"/>
                     <connections>
+                        <outlet property="multipleStackView" destination="Zqc-Fh-Cdm" id="Qnd-Qa-uKA"/>
+                        <outlet property="rangedStackView" destination="Zqc-Fh-Cdm" id="FmD-Df-qz7"/>
+                        <outlet property="singleStackView" destination="3Kn-zi-Dt2" id="oEp-SH-xO8"/>
                         <segue destination="MKX-tP-vvH" kind="show" id="jiA-Wo-OFT"/>
                     </connections>
                 </viewController>

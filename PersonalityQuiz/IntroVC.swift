@@ -14,6 +14,9 @@ class IntroVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func startQuizPress(_ sender: Any) {
+        performSegue(withIdentifier: "startQuiz", sender: nil)
+    }
+    
 }
 
